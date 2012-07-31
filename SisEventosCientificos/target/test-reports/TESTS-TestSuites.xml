@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="0" name="PessoaControllerTests" package="siseventoscientificos" tests="1" time="2.024" timestamp="2012-07-31T17:35:35">
+      <properties />
+
+      <testcase classname="siseventoscientificos.PessoaControllerTests" name="testSomething" time="2.008" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="1" name="PessoaTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-07-31T17:35:38">
+      <properties />
+
+      <testcase classname="siseventoscientificos.PessoaTests" name="testSomething" time="0.0" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="2" name="RoleControllerTests" package="siseventoscientificos" tests="1" time="0.202" timestamp="2012-07-31T17:35:38">
+      <properties />
+
+      <testcase classname="siseventoscientificos.RoleControllerTests" name="testSomething" time="0.186" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="3" name="RoleTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-07-31T17:35:38">
+      <properties />
+
+      <testcase classname="siseventoscientificos.RoleTests" name="testSomething" time="0.016" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="4" name="UserControllerTests" package="siseventoscientificos" tests="1" time="0.171" timestamp="2012-07-31T17:35:38">
+      <properties />
+
+      <testcase classname="siseventoscientificos.UserControllerTests" name="testSomething" time="0.171" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="5" name="UserTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-07-31T17:35:38">
+      <properties />
+
+      <testcase classname="siseventoscientificos.UserTests" name="testSomething" time="0.0" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
