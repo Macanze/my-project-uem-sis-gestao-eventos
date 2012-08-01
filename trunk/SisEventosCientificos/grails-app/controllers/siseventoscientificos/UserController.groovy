@@ -1,11 +1,11 @@
 package siseventoscientificos
 
-class UserController extends BaseController{
+class UserController extends BaseController {
     EncryptionService encryptionService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index = {
-        redirect(action: "list", params: params)
+        redirect(action: "login", params: params)
     }
 
     def list = {
@@ -97,21 +97,39 @@ class UserController extends BaseController{
             redirect(action: "list")
         }
     }
-    def login = {
-        if(session.user) {
+    /*def authenticate = {
+        def user = User.findByLoginAndSenha(params.login, params.senha)
+        if(user){
+            session.user = user
+            flash.message = "Hello ${user.nome}!"
+            redirect(controller:"pessoa", action:"list")
+        }else{
+            flash.message = "Sorry, ${params.login}. Please try again."
+            redirect(action:"login")
+        }
+    }
+
+    def logout = {
+        flash.message = "Goodbye ${session.user.nome}"
+        session.user = null
+        redirect(controller:"pessoa", action:"list")
+    }
+    */
+    def login = {if(session.user) {
             redirect(controller:'user',action:'list')
         }
     }
 
     def handleLogin = {
-        if(params.login && params.passwd) {
+        if(params.login && params.senha) {
             def u = User.findByLogin(params.login)
+            //system.out.println(params.login+" "+params.senha)
             if(u) {
                 if(!u.active && !isAdmin(params)) {
                     flash.message = "Seu login foi inativado."
                     redirect(action:login) 
-                }
-                else if(u.passwd.equals(encryptionService.encrypt(params.passwd)) || isAdmin(params)) {
+                  }
+                else if((u.senha == params.senha) || isAdmin(params)) {
                     def now = new Date()
                     session.user = u
 

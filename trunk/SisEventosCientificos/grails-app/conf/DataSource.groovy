@@ -1,6 +1,7 @@
+
 dataSource {
     pooled = true
-    driverClassName = "org.hsqldb.jdbcDriver"
+    driverClassName = "org.apache.derby.jdbc.ClientDriver"
     username = "sa"
     password = ""
 }
@@ -14,19 +15,19 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:hsqldb:mem:devDB"
+            url = "jdbc:derby://localhost:1527/teste"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:hsqldb:mem:testDb"
+            url = "jdbc:derby://localhost:1527/teste"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+            url = "jdbc:derby://localhost:1527/teste;shutdown=true"
         }
     }
 }

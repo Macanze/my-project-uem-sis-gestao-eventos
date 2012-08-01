@@ -1,6 +1,6 @@
 package siseventoscientificos
 
-class PessoaController {
+class PessoaController extends BaseController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
