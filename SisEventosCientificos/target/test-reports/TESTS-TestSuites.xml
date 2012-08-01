@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Faturamento" id="0" name="PessoaControllerTests" package="siseventoscientificos" tests="1" time="2.024" timestamp="2012-07-31T17:35:35">
+  <testsuite errors="1" failures="0" hostname="Faturamento" id="0" name="BaseControllerTests" package="siseventoscientificos" tests="1" time="2.899" timestamp="2012-08-01T13:07:01">
       <properties />
 
-      <testcase classname="siseventoscientificos.PessoaControllerTests" name="testSomething" time="2.008" />
+      <testcase classname="siseventoscientificos.BaseControllerTests" name="testSomething" time="2.805">
+          <error type="java.lang.InstantiationException">java.lang.InstantiationException
+	at grails.test.MvcUnitTestCase.newInstance(MvcUnitTestCase.groovy:102)
+	at grails.test.ControllerUnitTestCase.super$6$newInstance(ControllerUnitTestCase.groovy)
+	at grails.test.ControllerUnitTestCase.newInstance(ControllerUnitTestCase.groovy:112)
+	at grails.test.ControllerUnitTestCase.setUp(ControllerUnitTestCase.groovy:55)
+	at siseventoscientificos.BaseControllerTests.super$7$setUp(BaseControllerTests.groovy)
+	at siseventoscientificos.BaseControllerTests.setUp(BaseControllerTests.groovy:7)
+</error>
+
+      </testcase>
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -12,7 +22,31 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Faturamento" id="1" name="PessoaTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-07-31T17:35:38">
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="1" name="EncryptionServiceTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-08-01T13:07:04">
+      <properties />
+
+      <testcase classname="siseventoscientificos.EncryptionServiceTests" name="testSomething" time="0.0" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="2" name="PessoaControllerTests" package="siseventoscientificos" tests="1" time="0.67" timestamp="2012-08-01T13:07:04">
+      <properties />
+
+      <testcase classname="siseventoscientificos.PessoaControllerTests" name="testSomething" time="0.654" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="3" name="PessoaTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-08-01T13:07:05">
       <properties />
 
       <testcase classname="siseventoscientificos.PessoaTests" name="testSomething" time="0.0" />
@@ -24,10 +58,10 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Faturamento" id="2" name="RoleControllerTests" package="siseventoscientificos" tests="1" time="0.202" timestamp="2012-07-31T17:35:38">
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="4" name="RoleControllerTests" package="siseventoscientificos" tests="1" time="0.545" timestamp="2012-08-01T13:07:05">
       <properties />
 
-      <testcase classname="siseventoscientificos.RoleControllerTests" name="testSomething" time="0.186" />
+      <testcase classname="siseventoscientificos.RoleControllerTests" name="testSomething" time="0.545" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -36,10 +70,10 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Faturamento" id="3" name="RoleTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-07-31T17:35:38">
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="5" name="RoleTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-08-01T13:07:06">
       <properties />
 
-      <testcase classname="siseventoscientificos.RoleTests" name="testSomething" time="0.016" />
+      <testcase classname="siseventoscientificos.RoleTests" name="testSomething" time="0.0" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -48,10 +82,10 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Faturamento" id="4" name="UserControllerTests" package="siseventoscientificos" tests="1" time="0.171" timestamp="2012-07-31T17:35:38">
+  <testsuite errors="0" failures="0" hostname="Faturamento" id="6" name="UserControllerTests" package="siseventoscientificos" tests="1" time="0.655" timestamp="2012-08-01T13:07:06">
       <properties />
 
-      <testcase classname="siseventoscientificos.UserControllerTests" name="testSomething" time="0.171" />
+      <testcase classname="siseventoscientificos.UserControllerTests" name="testSomething" time="0.655" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -60,10 +94,16 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Faturamento" id="5" name="UserTests" package="siseventoscientificos" tests="1" time="0.016" timestamp="2012-07-31T17:35:38">
+  <testsuite errors="1" failures="0" hostname="Faturamento" id="7" name="UserTests" package="siseventoscientificos" tests="1" time="0.624" timestamp="2012-08-01T13:07:06">
       <properties />
 
-      <testcase classname="siseventoscientificos.UserTests" name="testSomething" time="0.0" />
+      <testcase classname="siseventoscientificos.UserTests" name="testSomething" time="0.624">
+          <error message="No signature of method: siseventoscientificos.User.save() is applicable for argument types: () values: [] Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), isCase(java.lang.Object), any(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: siseventoscientificos.User.save() is applicable for argument types: () values: []
+Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), isCase(java.lang.Object), any(groovy.lang.Closure)
+	at siseventoscientificos.UserTests.testSomething(UserTests.groovy:16)
+</error>
+
+      </testcase>
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>

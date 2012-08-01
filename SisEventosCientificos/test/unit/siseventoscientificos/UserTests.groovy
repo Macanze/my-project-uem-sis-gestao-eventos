@@ -12,6 +12,7 @@ class UserTests extends GrailsUnitTestCase {
     }
 
     void testSomething() {
-
+        
     }
+    
 }

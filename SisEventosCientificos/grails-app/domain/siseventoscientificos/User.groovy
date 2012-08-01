@@ -3,8 +3,8 @@ import siseventoscientificos.Role
 
 class User extends Pessoa {
     static withTable = "app_user"
-    String login
-    String senha
+    String  login
+    String  senha
     Boolean ativo = true
 
     static def hasMany = [ roles : Role ]
