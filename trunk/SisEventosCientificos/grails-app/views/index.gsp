@@ -48,23 +48,30 @@
             margin-left:280px;
             margin-right:20px;
         }
+        .logon {
+            background: url(images/leftnav_top.png) no-repeat top;
+            height:11px;
+            margin:0px;
+            font-size:1.8em;
+        }
         </style>
     </head>
+    
+</div>
     <body>
+      <div id="header">
+  <p><g:link class="header-main" controller="pessoa">Blogito</g:link></p>
+  <p class="header-sub">little</p>
+  <div id="loginHeader">
+    <g:loginControl />
+  </div>
         <div id="nav">
-            <div class="homePagePanel">
-                <div class="panelTop"></div>
+           <div class="homePagePanel">
+              <div class="panelTop"></div>
                 <div class="panelBody">
                     <h1>Application Status</h1>
                     <ul>
-                        <li>App version: <g:meta name="app.version"></g:meta></li>
-                        <li>Grails version: <g:meta name="app.grails.version"></g:meta></li>
-                        <li>Groovy version: ${org.codehaus.groovy.runtime.InvokerHelper.getVersion()}</li>
-                        <li>JVM version: ${System.getProperty('java.version')}</li>
-                        <li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-                        <li>Domains: ${grailsApplication.domainClasses.size()}</li>
-                        <li>Services: ${grailsApplication.serviceClasses.size()}</li>
-                        <li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
+                        
                     </ul>
                     <h1>Installed Plugins</h1>
                     <ul>
@@ -72,7 +79,7 @@
                                value="${applicationContext.getBean('pluginManager')}"></g:set>
 
                         <g:each var="plugin" in="${pluginManager.allPlugins}">
-                            <li>${plugin.name} - ${plugin.version}</li>
+                            
                         </g:each>
 
                     </ul>
