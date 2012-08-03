@@ -1,5 +1,8 @@
 package siseventoscientificos
 
+
+
+
 abstract class BaseController {
     def beforeInterceptor = [action:this.&authenticate,except:['login', 'handleLogin']]
 
@@ -13,5 +16,10 @@ abstract class BaseController {
             return false
         }
     }
+    def logout = {
+    flash.message = "Goodbye ${session.user.name}"
+    session.user = null
+    redirect(controller:"user", action:"list")
+  }
    
 }

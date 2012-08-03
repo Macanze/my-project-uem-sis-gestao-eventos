@@ -11,5 +11,6 @@ class Pessoa {
     static constraints = {
         nome(length:3..100, blank:false)
         email(email:true)
+        id(unique:true)
     }
 }

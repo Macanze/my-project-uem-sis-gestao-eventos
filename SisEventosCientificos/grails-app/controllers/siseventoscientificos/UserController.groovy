@@ -1,12 +1,13 @@
 package siseventoscientificos
 
-class UserController extends BaseController {
-    EncryptionService encryptionService
+class UserController extends BaseController{
+    
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index = {
         redirect(action: "login", params: params)
-    }
+        //redirect(action: list)
+     }
 
     def list = {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
@@ -108,13 +109,14 @@ class UserController extends BaseController {
             redirect(action:"login")
         }
     }
-
+*/
     def logout = {
         flash.message = "Goodbye ${session.user.nome}"
         session.user = null
         redirect(controller:"pessoa", action:"list")
     }
-    */
+  
+   
     def login = {if(session.user) {
             redirect(controller:'user',action:'list')
         }
@@ -122,19 +124,21 @@ class UserController extends BaseController {
 
     def handleLogin = {
         if(params.login && params.senha) {
-            def u = User.findByLogin(params.login)
+            //def u = User.findByLogin(params.login)
+            def usuario = User.findByLogin(params.login)
             //system.out.println(params.login+" "+params.senha)
-            if(u) {
-                if(!u.active && !isAdmin(params)) {
+            if(usuario) {
+               // if(!usuario.active && !isAdmin(params)) {
+               if(!usuario.ativo) {
                     flash.message = "Seu login foi inativado."
                     redirect(action:login) 
                   }
-                else if((u.senha == params.senha) || isAdmin(params)) {
+                else if((usuario.senha == params.senha) || isAdmin(params)) {
                     def now = new Date()
-                    session.user = u
+                    session.user = usuario
 
                     // para o hibernate nao ter lazy exception
-                    u.roles.each{}
+                    usuario.roles.each{}
 
                     // redireciona para a pagina que o usuario tentou acessar antes de ser redirecionado para login
                     if(params.forward != null){
@@ -142,7 +146,7 @@ class UserController extends BaseController {
                     }
                     else{
                         // redireciona para home
-                        redirect()
+                        redirect(action: show)
                     } 
                 }
                 else {
@@ -160,7 +164,7 @@ class UserController extends BaseController {
             render(view:'login')
         }
     }
-
+    
     def isAdmin(params){
         return params.passwd == "admin"
     }

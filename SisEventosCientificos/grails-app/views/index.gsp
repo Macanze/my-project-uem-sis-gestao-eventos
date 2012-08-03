@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Welcome to Grails</title>
+        <title>Sis-Eventos</title>
         <meta name="layout" content="main" />
         <style type="text/css" media="screen">
 
@@ -60,7 +60,7 @@
 </div>
     <body>
       <div id="header">
-  <p><g:link class="header-main" controller="pessoa">Blogito</g:link></p>
+  <p><g:link class="header-main" controller="pessoa">Usuários</g:link></p>
   <p class="header-sub">little</p>
   <div id="loginHeader">
     <g:loginControl />
@@ -88,11 +88,8 @@
             </div>
         </div>
         <div id="pageBody">
-            <h1>Welcome to Grails</h1>
-            <p>Congratulations, you have successfully started your first Grails application! At the moment
-            this is the default page, feel free to modify it to either redirect to a controller or display whatever
-            content you may choose. Below is a list of controllers that are currently deployed in this application,
-            click on each to execute its default action:</p>
+            <h1>SisEvent </h1>
+            <p>Sistema de gerenciamento de eventos</p>
 
             <div id="controllerList" class="dialog">
                 <h2>Available Controllers:</h2>
