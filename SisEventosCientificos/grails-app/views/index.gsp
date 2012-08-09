@@ -69,11 +69,11 @@
            <div class="homePagePanel">
               <div class="panelTop"></div>
                 <div class="panelBody">
-                    <h1>Application Status</h1>
+                    <h1>Status</h1>
                     <ul>
                         
                     </ul>
-                    <h1>Installed Plugins</h1>
+                    <h1>Lista de Eventos</h1>
                     <ul>
                         <g:set var="pluginManager"
                                value="${applicationContext.getBean('pluginManager')}"></g:set>
@@ -92,11 +92,15 @@
             <p>Sistema de gerenciamento de eventos</p>
 
             <div id="controllerList" class="dialog">
-                <h2>Available Controllers:</h2>
+                <h1>Cadastros:</h1>
                 <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+               <!--     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                         <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
                     </g:each>
+               -->
+                  <h1><li class="controller" ><g:link controller ="pessoa" action="list">Pessoas</g:link></li>
+                  <li class="controller" ><g:link controller ="user"   action="list">Usuário</g:link></li>
+                  <li class="controller" ><g:link controller ="role"   action="list">Regras Usuario</g:link></li></h1>
                 </ul>
             </div>
         </div>
