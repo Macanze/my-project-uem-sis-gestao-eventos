@@ -1,6 +1,9 @@
 package siseventoscientificos
 
-class Agenda {
+class Agenda extends Local{
+    String data
+    String hora
+    
 
     static constraints = {
     }
